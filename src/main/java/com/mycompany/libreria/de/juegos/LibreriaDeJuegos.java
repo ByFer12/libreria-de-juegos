@@ -119,6 +119,7 @@ public class LibreriaDeJuegos {
     }
 
     public static void basketball() {
+        int puntosUno = 0, puntosdos = 0;
         Scanner a = new Scanner(System.in);
         String nombre1, nombre2;
         System.out.println("Bienvenidos a Basketball");
@@ -130,33 +131,151 @@ public class LibreriaDeJuegos {
         nombre2 = a.next();
         System.out.println("Cuantos turnos desean jugar? ");
         int turnos = ent.nextInt();
-
-            int elegirTurno = (int) (Math.random() * 2);
-            if (elegirTurno == 0) {
+        //validamos el numero de turnos
+        //encerrar en un bucle los turnos hasta que se acaben los turnos que pidieron
+        while (turnos != 0) {
+        int elegirTurno = (int) (Math.random() * 2); //aqui elegimos el turno al azar
+            System.out.println("Turno: "+turnos);
+            switch(elegirTurno){
+                
+            
+            case 0:
+                //etramos al primer turno correspondiente a la primera persona
+                int opcion, salir = 0;
+                do {
                 System.out.println("Turno de: " + nombre1);
-            }
-            if (elegirTurno == 1) {
-                System.out.println("Turno de : " + nombre2);
-            }
+                    //Si 
+                    do {
+                        System.out.println(nombre1 + " Elija una opcion");
+                        System.out.println("1------Tiro");
+                        System.out.println("2------Defensa");
 
+                        opcion = ent.nextInt();
+                    } while (opcion < 1 || opcion > 2);
+                    switch (opcion) {
+                        case 1:
+                            salir++;
+                            int option,
+                             exit = 0;
+                            do {
+                                System.out.println("1------Salto largo");
+                                System.out.println("2------Salto corto");
+                                option = ent.nextInt();
+                                switch (opcion) {
+                                    case 1:
+                                        //salto largo
+                                        exit++;
+                                        int prob1 = (int) (Math.random() * 101);
+
+                                        if (prob1 <= 65) {
+                                            puntosUno += 3;
+                                            System.out.println(nombre1 + " Puntos: " + puntosUno);
+
+                                        } else {
+                                            System.out.println(nombre1 + " Puntos: " + puntosUno);
+                                        }
+
+                                        System.out.println(nombre1 + " Haz hecho correctamente tu tiro Largo");
+                                        break;
+                                    case 2:
+                                        //salto corto
+                                        exit++;
+                                        int prob2 = (int) (Math.random() * 101);
+                                        if (prob2 <= 80) {
+                                            puntosUno += 2;
+                                            System.out.println(nombre1 + " Puntos " + puntosUno);
+
+                                        } else {
+                                            System.out.println(nombre1 + " Puntos: " + puntosUno);
+                                        }
+                                        System.out.println(nombre1 + " Haz hecho correctamente tu tiro Corto");
+                                        break;
+
+                                }
+                            } while (exit != 1);
+
+                            break;
+
+                        case 2:
+                            //defensa
+                            salir++;
+                            System.out.println("Defensa: "+nombre1);
+                            break;
+                    }
+                } while (salir != 2);
+                break;
+                case 1: 
+ 
+                System.out.println("Turno de : " + nombre2);
+                //etramos al primer turno correspondiente a la primera persona
+
+                int o, sa = 0;
+                do {
+                    //Si 
+                    do {
+                        System.out.println(nombre2 + " Elija una opcion");
+                        System.out.println("1------Tiro");
+                        System.out.println("2------Defensa");
+                        o = ent.nextInt();
+                    } while (o < 1 || o > 2);
+                    switch (o) {
+                        case 1:
+                            //tiro
+                            sa++;
+                            int op,
+                             exit = 0;
+                            do {
+                                System.out.println("1------Salto largo");
+                                System.out.println("2------Salto corto");
+                                op = ent.nextInt();
+                                switch (op) {
+                                    case 1:
+                                        //tiro largo
+                                        exit++;
+                                        int prob1 = (int) (Math.random() * 101);
+
+                                        if (prob1 <= 65) {
+                                            puntosdos += 3;
+                                            System.out.println(nombre2 + " Puntos: " + puntosdos);
+
+                                        } else {
+                                            System.out.println(nombre2 + " Puntos: " + puntosdos);
+                                        }
+
+                                        System.out.println(nombre2 + " Haz hecho correctamente tu tiro Largo");
+                                        break;
+                                    case 2:
+                                        //tiro corto
+                                        exit++;
+                                        int prob2 = (int) (Math.random() * 101);
+                                        if (prob2 <= 80) {
+                                            puntosUno += 2;
+                                            System.out.println(nombre2 + " Puntos " + puntosdos);
+
+                                        } else {
+                                            System.out.println(nombre2 + " Puntos: " + puntosdos);
+                                        }
+                                        System.out.println(nombre2 + " Haz hecho correctamente tu tiro Corto");
+                                        break;
+
+                                }
+                            } while (exit != 1);
+
+                            break;
+
+                        case 2:
+                            sa++;
+                            System.out.println("Defensa "+nombre2);
+                            //defensa
+                            break;
+                    }
+                } while (sa!= 2);
+            break;
+            }
+            turnos--;
+        }
     }
-    
-    public static void turnoUno(String nombre){
-        int salir;
-        do{
-            int opcion;
-            do{
-            System.out.println("1------Salto corto");
-            System.out.println("2------Salto largo");
-            System.out.println("Elija una opcion");
-            opcion=ent.nextInt();
-            }while(opcion<1||opcion>2);
-            
-            
-            
-            salir=0;
-        }while(salir!=0);
-    }
+//while(turno!=0);
 
     public static void cartas() {
         System.out.println("Bienvenido al casino donde apostamos y ganamos\n");
