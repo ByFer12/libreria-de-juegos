@@ -64,7 +64,7 @@ public class LibreriaDeJuegos {
         String palabra, adivinar;
         char letra;
         char[] pal;
-        int terminar;
+        int terminar, intentos=0;
         boolean correcto;
         System.out.println("Ingrese una palabra");
         palabra = ent.nextLine();
@@ -73,11 +73,12 @@ public class LibreriaDeJuegos {
         terminar = palabra.length() + 1;
 
         do {
-            System.out.println("\nPalabra a adivinar: " + " Terminar " + terminar);
+            System.out.println("\nPalabra a adivinar: " + " Intentos " + intentos);
             for (int i = 0; i < pal.length; i++) {
                 System.out.print(pal[i] + " - ");
 
             }
+            intentos++;
 
             correcto = false;
 
@@ -93,14 +94,47 @@ public class LibreriaDeJuegos {
             if (correcto == false) {
                 avance++;
                 System.out.println("\nLetra incorrecta: ");
-                horizontal();
-                if (avance == 2) {
-                    estanca();
-
+               
+                
+                if (avance == 1) {
+                    System.out.println("Error 1");
+                    ahorc1();
+                }else if(avance==2){
+                     System.out.println("Error 2");
+                    ahorc2();
+                }else if(avance==3){
+                    System.out.println("Error 3");
+                    ahorc3();
+                }else if(avance==4){
+                    System.out.println("Error 4");
+                    ahorc4();
                 }
+                else if(avance==5){
+                    System.out.println("Error 5");
+                    ahorc5();
+                }else if(avance==6){
+                    System.out.println("Error 6");
+                    ahorc6();
+                }
+                else if(avance==7){
+                    System.out.println("Error 7");
+                    ahorc7();
+                }
+                else if(avance==8){
+                    System.out.println("Error 8");
+                    ahorc8();
+                }else if(avance==9){
+                    System.out.println("Error 9");
+                    ahorc9();
+                }else if(avance==10){
+                    System.out.println("Error 10");
+                    ahorc10();
+                    terminar=0;
+                }
+                
             }
 
-            terminar--;
+            //terminar--;
 
             String nuevo = String.valueOf(pal);
             if (nuevo.equalsIgnoreCase(palabra)) {
@@ -116,6 +150,145 @@ public class LibreriaDeJuegos {
         } while (terminar != 0);
         System.out.println("\nGracias por jugar, vuelva pronto");
 
+    }
+    
+    public static void ahorc1(){
+        System.out.println("*******************");
+    }
+     public static void ahorc2(){
+        System.out.println("*******************");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+    }
+         public static void ahorc3(){
+        System.out.println("*******************");
+        System.out.println("    |            **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+    }
+        public static void ahorc4(){
+        System.out.println("*******************");
+        System.out.println("    |            **");
+        System.out.println("    O            **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+    }
+        public static void ahorc5(){
+        System.out.println("*******************");
+        System.out.println("    |            **");
+        System.out.println("    O            **");
+        System.out.println("    |            **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+    }
+        public static void ahorc6(){
+        System.out.println("*******************");
+        System.out.println("    |            **");
+        System.out.println("    |            **");
+        System.out.println("    O            **");
+        System.out.println("   /|l           **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+    }
+         public static void ahorc7(){
+        System.out.println("*******************");
+        System.out.println("    |            **");
+        System.out.println("    |            **");
+        System.out.println("    O            **");
+        System.out.println("   /|l           **");
+        System.out.println("    |            **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+    }
+        public static void ahorc8(){
+        System.out.println("*******************");
+        System.out.println("    |            **");
+        System.out.println("    |            **");
+        System.out.println("    O            **");
+        System.out.println("   /|l           **");
+        System.out.println("    |_           **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+    }
+         public static void ahorc9(){
+        System.out.println("*******************");
+        System.out.println("    |            **");
+        System.out.println("    |            **");
+        System.out.println("    O            **");
+        System.out.println("   /|l           **");
+        System.out.println("   _|_           **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+    }
+         public static void ahorc10(){
+        System.out.println("*******************");
+        System.out.println("    |            **");
+        System.out.println("    |            **");
+        System.out.println("    O            **");
+        System.out.println("   /|l           **");
+        System.out.println("   _|_           **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("  GAME OVER!     **");
+        System.out.println("                 **");
+        System.out.println("                 **");
+        System.out.println("                 **");
     }
 
     public static void basketball() {
@@ -134,143 +307,144 @@ public class LibreriaDeJuegos {
         //validamos el numero de turnos
         //encerrar en un bucle los turnos hasta que se acaben los turnos que pidieron
         while (turnos != 0) {
-        int elegirTurno = (int) (Math.random() * 2); //aqui elegimos el turno al azar
-            System.out.println("Turno: "+turnos);
-            switch(elegirTurno){
-                
-            
-            case 0:
-                //etramos al primer turno correspondiente a la primera persona
-                int opcion, salir = 0;
-                do {
-                System.out.println("Turno de: " + nombre1);
-                    //Si 
+            int elegirTurno = (int) (Math.random() * 2); //aqui elegimos el turno al azar
+            System.out.println("Turno: " + turnos);
+            switch (elegirTurno) {
+
+                case 0:
+                    //etramos al primer turno correspondiente a la primera persona
+                    int opcion,
+                     salir = 0;
                     do {
-                        System.out.println(nombre1 + " Elija una opcion");
-                        System.out.println("1------Tiro");
-                        System.out.println("2------Defensa");
+                        System.out.println("Turno de: " + nombre1);
+                        //Si 
+                        do {
+                            System.out.println(nombre1 + " Elija una opcion");
+                            System.out.println("1------Tiro");
+                            System.out.println("2------Defensa");
 
-                        opcion = ent.nextInt();
-                    } while (opcion < 1 || opcion > 2);
-                    switch (opcion) {
-                        case 1:
-                            salir++;
-                            int option,
-                             exit = 0;
-                            do {
-                                System.out.println("1------Salto largo");
-                                System.out.println("2------Salto corto");
-                                option = ent.nextInt();
-                                switch (opcion) {
-                                    case 1:
-                                        //salto largo
-                                        exit++;
-                                        int prob1 = (int) (Math.random() * 101);
+                            opcion = ent.nextInt();
+                        } while (opcion < 1 || opcion > 2);
+                        switch (opcion) {
+                            case 1:
+                                salir++;
+                                int option,
+                                 exit = 0;
+                                do {
+                                    System.out.println("1------Salto largo");
+                                    System.out.println("2------Salto corto");
+                                    option = ent.nextInt();
+                                    switch (opcion) {
+                                        case 1:
+                                            //salto largo
+                                            exit++;
+                                            int prob1 = (int) (Math.random() * 101);
 
-                                        if (prob1 <= 65) {
-                                            puntosUno += 3;
-                                            System.out.println(nombre1 + " Puntos: " + puntosUno);
+                                            if (prob1 <= 65) {
+                                                puntosUno += 3;
+                                                System.out.println(nombre1 + " Puntos: " + puntosUno);
 
-                                        } else {
-                                            System.out.println(nombre1 + " Puntos: " + puntosUno);
-                                        }
+                                            } else {
+                                                System.out.println(nombre1 + " Puntos: " + puntosUno);
+                                            }
 
-                                        System.out.println(nombre1 + " Haz hecho correctamente tu tiro Largo");
-                                        break;
-                                    case 2:
-                                        //salto corto
-                                        exit++;
-                                        int prob2 = (int) (Math.random() * 101);
-                                        if (prob2 <= 80) {
-                                            puntosUno += 2;
-                                            System.out.println(nombre1 + " Puntos " + puntosUno);
+                                            System.out.println(nombre1 + " Haz hecho correctamente tu tiro Largo");
+                                            break;
+                                        case 2:
+                                            //salto corto
+                                            exit++;
+                                            int prob2 = (int) (Math.random() * 101);
+                                            if (prob2 <= 80) {
+                                                puntosUno += 2;
+                                                System.out.println(nombre1 + " Puntos " + puntosUno);
 
-                                        } else {
-                                            System.out.println(nombre1 + " Puntos: " + puntosUno);
-                                        }
-                                        System.out.println(nombre1 + " Haz hecho correctamente tu tiro Corto");
-                                        break;
+                                            } else {
+                                                System.out.println(nombre1 + " Puntos: " + puntosUno);
+                                            }
+                                            System.out.println(nombre1 + " Haz hecho correctamente tu tiro Corto");
+                                            break;
 
-                                }
-                            } while (exit != 1);
+                                    }
+                                } while (exit != 1);
 
-                            break;
+                                break;
 
-                        case 2:
-                            //defensa
-                            salir++;
-                            System.out.println("Defensa: "+nombre1);
-                            break;
-                    }
-                } while (salir != 2);
-                break;
-                case 1: 
- 
-                System.out.println("Turno de : " + nombre2);
-                //etramos al primer turno correspondiente a la primera persona
+                            case 2:
+                                //defensa
+                                salir++;
+                                System.out.println("Defensa: " + nombre1);
+                                break;
+                        }
+                    } while (salir != 2);
+                    break;
+                case 1:
 
-                int o, sa = 0;
-                do {
-                    //Si 
+                    System.out.println("Turno de : " + nombre2);
+                    //etramos al primer turno correspondiente a la primera persona
+
+                    int o,
+                     sa = 0;
                     do {
-                        System.out.println(nombre2 + " Elija una opcion");
-                        System.out.println("1------Tiro");
-                        System.out.println("2------Defensa");
-                        o = ent.nextInt();
-                    } while (o < 1 || o > 2);
-                    switch (o) {
-                        case 1:
-                            //tiro
-                            sa++;
-                            int op,
-                             exit = 0;
-                            do {
-                                System.out.println("1------Salto largo");
-                                System.out.println("2------Salto corto");
-                                op = ent.nextInt();
-                                switch (op) {
-                                    case 1:
-                                        //tiro largo
-                                        exit++;
-                                        int prob1 = (int) (Math.random() * 101);
+                        //Si 
+                        do {
+                            System.out.println(nombre2 + " Elija una opcion");
+                            System.out.println("1------Tiro");
+                            System.out.println("2------Defensa");
+                            o = ent.nextInt();
+                        } while (o < 1 || o > 2);
+                        switch (o) {
+                            case 1:
+                                //tiro
+                                sa++;
+                                int op,
+                                 exit = 0;
+                                do {
+                                    System.out.println("1------Salto largo");
+                                    System.out.println("2------Salto corto");
+                                    op = ent.nextInt();
+                                    switch (op) {
+                                        case 1:
+                                            //tiro largo
+                                            exit++;
+                                            int prob1 = (int) (Math.random() * 101);
 
-                                        if (prob1 <= 65) {
-                                            puntosdos += 3;
-                                            System.out.println(nombre2 + " Puntos: " + puntosdos);
+                                            if (prob1 <= 65) {
+                                                puntosdos += 3;
+                                                System.out.println(nombre2 + " Puntos: " + puntosdos);
 
-                                        } else {
-                                            System.out.println(nombre2 + " Puntos: " + puntosdos);
-                                        }
+                                            } else {
+                                                System.out.println(nombre2 + " Puntos: " + puntosdos);
+                                            }
 
-                                        System.out.println(nombre2 + " Haz hecho correctamente tu tiro Largo");
-                                        break;
-                                    case 2:
-                                        //tiro corto
-                                        exit++;
-                                        int prob2 = (int) (Math.random() * 101);
-                                        if (prob2 <= 80) {
-                                            puntosUno += 2;
-                                            System.out.println(nombre2 + " Puntos " + puntosdos);
+                                            System.out.println(nombre2 + " Haz hecho correctamente tu tiro Largo");
+                                            break;
+                                        case 2:
+                                            //tiro corto
+                                            exit++;
+                                            int prob2 = (int) (Math.random() * 101);
+                                            if (prob2 <= 80) {
+                                                puntosUno += 2;
+                                                System.out.println(nombre2 + " Puntos " + puntosdos);
 
-                                        } else {
-                                            System.out.println(nombre2 + " Puntos: " + puntosdos);
-                                        }
-                                        System.out.println(nombre2 + " Haz hecho correctamente tu tiro Corto");
-                                        break;
+                                            } else {
+                                                System.out.println(nombre2 + " Puntos: " + puntosdos);
+                                            }
+                                            System.out.println(nombre2 + " Haz hecho correctamente tu tiro Corto");
+                                            break;
 
-                                }
-                            } while (exit != 1);
+                                    }
+                                } while (exit != 1);
 
-                            break;
+                                break;
 
-                        case 2:
-                            sa++;
-                            System.out.println("Defensa "+nombre2);
-                            //defensa
-                            break;
-                    }
-                } while (sa!= 2);
-            break;
+                            case 2:
+                                sa++;
+                                System.out.println("Defensa " + nombre2);
+                                //defensa
+                                break;
+                        }
+                    } while (sa != 2);
+                    break;
             }
             turnos--;
         }
@@ -323,17 +497,7 @@ public class LibreriaDeJuegos {
         return apost;
     }
 
-    public static void estanca() {
-        for (int i = 0; i < 12; i++) {
-            System.out.println("                 *");
-        }
-    }
-
-    public static void horizontal() {
-        for (int i = 0; i < 17; i++) {
-            System.out.print("*");
-        }
-    }
+ 
 
     public static void hanoi() {
 
